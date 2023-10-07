@@ -26,6 +26,7 @@ const schemaData = mongoose.Schema(
   },
   {
     timestamps: true,
+    strictQuery: true,
   }
 );
 
