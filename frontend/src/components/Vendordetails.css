@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(216, 216, 247);
+}
+.container {
+  padding: 10px;
+  background-color: rgb(77, 154, 241);
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.btn {
+  border: none;
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: olive;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.vendor-container {
+  position: relative;
+}

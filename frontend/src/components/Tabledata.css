@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  max-width: fit-content;
+  margin: auto;
+}
+
+.table-container table thead tr th {
+  background-color: rgb(38, 165, 0);
+  color: black;
+  padding: 10px 20px 20px 10px;
+  margin: 30px;
+  border-bottom: 1px solid black;
+  max-width: 5000;
+}
+.table-container table tbody tr td {
+  background-color: rgb(190, 245, 208);
+  color: black;
+  padding: 10px 20px 20px 10px;
+  margin: 30px;
+  border-bottom: 1px solid black;
+  max-width: 500;
+}
+
+.btn-edit {
+  font-size: 15px;
+  background-color: rgb(255, 241, 39);
+  color: black;
+}
+.btn-delete {
+  font-size: 15px;
+  background-color: red;
+}
+
+.table-container table .info {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}

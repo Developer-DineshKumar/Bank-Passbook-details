@@ -1,0 +1,23 @@
+.form-container {
+  height: 100vh;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid rgb(19, 1, 99);
+  padding: 25px;
+}
+.title {
+  color: blue;
+  font-size: 35px;
+  font-family: "Roboto";
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.button {
+  text-align: center;
+}
+.close-btn {
+  text-align: right;
+  font-size: 25px;
+  cursor: pointer;
+}
