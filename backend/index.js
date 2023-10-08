@@ -87,7 +87,13 @@ app.delete("/delete/:id", async (req, res) => {
   res.send({ success: true, message: "data delete successfully", data: data });
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/bank-passbooks", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect("mongodb://127.0.0.1:27017/bank-passbooks", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("connected to mongodb");
+    app.listen(PORT, () => console.log("server is running"));
+  })
+  .catch((err) => console.log(err));
