@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
 const app = express();
 app.use(cors());
@@ -88,7 +89,7 @@ app.delete("/delete/:id", async (req, res) => {
 });
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/bank-passbooks", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
