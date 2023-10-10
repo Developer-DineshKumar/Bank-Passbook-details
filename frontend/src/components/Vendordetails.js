@@ -32,7 +32,9 @@ const Vendordetails = () => {
   //Get the data
   const getFetchData = async () => {
     try {
-      const data = await axios.get("http://localhost:8080/");
+      const data = await axios.get(
+        "https://bank-passbook-details.onrender.com/"
+      );
       console.log(data);
       if (data.data.success) {
         setDataList(data.data.data);
@@ -56,7 +58,9 @@ const Vendordetails = () => {
 
     if (shouldDelete) {
       try {
-        const data = await axios.delete("http://localhost:8080/delete/" + id);
+        const data = await axios.delete(
+          "https://bank-passbook-details.onrender.com/delete/" + id
+        );
         if (data.data.success) {
           alert(data.data.message);
           getFetchData();
@@ -76,7 +80,7 @@ const Vendordetails = () => {
   const handleUpdate = async (id, formData) => {
     try {
       const data = await axios.put(
-        `http://localhost:8080/update/${id}`,
+        `https://bank-passbook-details.onrender.com/update/${id}`,
         formData
       );
       if (data.data.success) {
@@ -105,16 +109,18 @@ const Vendordetails = () => {
       <h1>Vendor Details</h1>
       <div className="container">
         {isFormVisible ? (
-          <div className="vendor-container">
-            <Form
-              onClose={handleCloseForm}
-              dataList={dataList}
-              getFetchData={getFetchData}
-              isEditMode={isEditMode}
-              selectedVendor={selectedVendor}
-              handleUpdate={handleUpdate}
-            />
-          </div>
+          <>
+            <div className="vendor-container">
+              <Form
+                onClose={handleCloseForm}
+                dataList={dataList}
+                getFetchData={getFetchData}
+                isEditMode={isEditMode}
+                selectedVendor={selectedVendor}
+                handleUpdate={handleUpdate}
+              />
+            </div>
+          </>
         ) : (
           <>
             <button className="btn" onClick={handleToggleForm}>

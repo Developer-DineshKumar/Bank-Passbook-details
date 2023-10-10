@@ -77,7 +77,10 @@ const Form = (props) => {
       getFetchData();
     } else {
       try {
-        const data = await axios.post("http://localhost:8080/create", formData);
+        const data = await axios.post(
+          "https://bank-passbook-details.onrender.com/create",
+          formData
+        );
         console.log(data);
         if (data.data.success) {
           onClose();
